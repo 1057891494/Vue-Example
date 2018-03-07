@@ -1,0 +1,36 @@
+{
+    "name": "vue-example",
+    "version": "0.0.1",
+    "description": "This is a project to help use Vue",
+    "main": "src/entry.js",
+    "scripts": {
+        "start": "npm run dev",
+        "release": "node_modules/.bin/webpack",
+        "dev": "node_modules/.bin/webpack-dev-server --inline --hot --port 10000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yelloxing/Vue-Example.git"
+    },
+    "author": "yelloxing",
+    "license": "MIT",
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-core": "^6.24.1",
+        "babel-loader": "^6.4.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-runtime": "^6.23.0",
+        "css-loader": "^0.28.0",
+        "vue-hot-reload-api": "^2.1.0",
+        "vue-html-loader": "^1.2.4",
+        "vue-loader": "^11.3.4",
+        "vue-style-loader": "^3.0.0",
+        "vue-template-compiler": "^2.2.6",
+        "webpack": "^2.4.1",
+        "webpack-dev-server": "^2.4.2"
+    },
+    "dependencies": {
+        "vue": "^2.2.6"
+    }
+}
