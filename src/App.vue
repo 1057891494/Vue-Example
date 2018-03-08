@@ -12,6 +12,9 @@
         <li>
           <router-link to="/classStyle">Class与Style绑定</router-link>
         </li>
+        <li>
+          <router-link to="/ifShow">条件渲染</router-link>
+        </li>
       </ul>
     </nav>
     <!--路由跳转视图-->

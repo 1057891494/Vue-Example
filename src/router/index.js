@@ -3,15 +3,17 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 //路由跳转的组件，要提前注入
-import CalcWatch from '../components/CalcWatch/CalcWatch.vue';
-import ClassStyle from '../components/ClassStyle/ClassStyle.vue';
+import CalcWatch from '../components/CalcWatch.vue';
+import ClassStyle from '../components/ClassStyle.vue';
+import IfShow from '../components/IfShow.vue';
 
 //路由配置
 const router = new VueRouter({
     routes: [
         { path: '/', redirect: 'calcWatch' },
         { path: '/calcWatch', component: CalcWatch },
-        { path: '/classStyle', component: ClassStyle }
+        { path: '/classStyle', component: ClassStyle },
+        { path: '/ifShow', component: IfShow }
     ]
 });
 
