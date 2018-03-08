@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 import CalcWatch from '../components/CalcWatch.vue';
 import ClassStyle from '../components/ClassStyle.vue';
 import IfShow from '../components/IfShow.vue';
+import VFor from '../components/VFor.vue';
 
 //路由配置
 const router = new VueRouter({
@@ -13,7 +14,8 @@ const router = new VueRouter({
         { path: '/', redirect: 'calcWatch' },
         { path: '/calcWatch', component: CalcWatch },
         { path: '/classStyle', component: ClassStyle },
-        { path: '/ifShow', component: IfShow }
+        { path: '/ifShow', component: IfShow },
+        { path: '/vFor', component: VFor }
     ]
 });
 

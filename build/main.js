@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -225,7 +225,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(24)
+var listToStyles = __webpack_require__(28)
 
 /*
 type StyleObject = {
@@ -8571,7 +8571,7 @@ Vue$3.nextTick(function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(4), __webpack_require__(25).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(4), __webpack_require__(29).setImmediate))
 
 /***/ }),
 /* 6 */
@@ -8579,13 +8579,13 @@ Vue$3.nextTick(function () {
 
 
 /* styles */
-__webpack_require__(20)
+__webpack_require__(23)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(27),
+  __webpack_require__(31),
   /* template */
-  __webpack_require__(16),
+  __webpack_require__(18),
   /* scopeId */
   null,
   /* cssModules */
@@ -8626,21 +8626,25 @@ var _vue = __webpack_require__(5);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = __webpack_require__(26);
+var _vueRouter = __webpack_require__(30);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _CalcWatch = __webpack_require__(13);
+var _CalcWatch = __webpack_require__(14);
 
 var _CalcWatch2 = _interopRequireDefault(_CalcWatch);
 
-var _ClassStyle = __webpack_require__(14);
+var _ClassStyle = __webpack_require__(15);
 
 var _ClassStyle2 = _interopRequireDefault(_ClassStyle);
 
-var _IfShow = __webpack_require__(15);
+var _IfShow = __webpack_require__(16);
 
 var _IfShow2 = _interopRequireDefault(_IfShow);
+
+var _VFor = __webpack_require__(17);
+
+var _VFor2 = _interopRequireDefault(_VFor);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8651,7 +8655,7 @@ _vue2.default.use(_vueRouter2.default);
 
 //路由配置
 var router = new _vueRouter2.default({
-    routes: [{ path: '/', redirect: 'calcWatch' }, { path: '/calcWatch', component: _CalcWatch2.default }, { path: '/classStyle', component: _ClassStyle2.default }, { path: '/ifShow', component: _IfShow2.default }]
+    routes: [{ path: '/', redirect: 'calcWatch' }, { path: '/calcWatch', component: _CalcWatch2.default }, { path: '/classStyle', component: _ClassStyle2.default }, { path: '/ifShow', component: _IfShow2.default }, { path: '/vFor', component: _VFor2.default }]
 });
 
 //有点类似管道函数，每次跳转前会先调用这个方法，如果注册了新方法，一定要调用next()
@@ -8685,7 +8689,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.CalcWatch ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.CalcWatch .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.vFor ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.vFor .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8699,7 +8703,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ClassStyle .blueclass {\n  color: blue;\n}\n.ClassStyle .little-title {\n  color: brown;\n  line-height: 2em;\n}\n.ClassStyle ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.ClassStyle .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.CalcWatch ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.CalcWatch .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8713,13 +8717,27 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.IfShow ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.IfShow .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.ClassStyle .blueclass {\n  color: blue;\n}\n.ClassStyle .little-title {\n  color: brown;\n  line-height: 2em;\n}\n.ClassStyle ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.ClassStyle .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.IfShow ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.IfShow .title {\n  color: red;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -8912,18 +8930,18 @@ exports.push([module.i, "\n.IfShow ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(3)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(21)
+__webpack_require__(25)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(28),
+  __webpack_require__(32),
   /* template */
-  __webpack_require__(17),
+  __webpack_require__(20),
   /* scopeId */
   null,
   /* cssModules */
@@ -8950,18 +8968,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(22)
+__webpack_require__(26)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(29),
+  __webpack_require__(33),
   /* template */
-  __webpack_require__(18),
+  __webpack_require__(21),
   /* scopeId */
   null,
   /* cssModules */
@@ -8988,18 +9006,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(23)
+__webpack_require__(27)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(30),
+  __webpack_require__(34),
   /* template */
-  __webpack_require__(19),
+  __webpack_require__(22),
   /* scopeId */
   null,
   /* cssModules */
@@ -9026,7 +9044,45 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 16 */
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(24)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(35),
+  /* template */
+  __webpack_require__(19),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kapok/Github/Vue-Example/src/components/VFor.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] VFor.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41522412", Component.options)
+  } else {
+    hotAPI.reload("data-v-41522412", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9044,7 +9100,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": "/ifShow"
     }
-  }, [_vm._v("条件渲染")])], 1)])]), _vm._v(" "), _c('router-view')], 1)
+  }, [_vm._v("条件渲染")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": "/vFor"
+    }
+  }, [_vm._v("列表渲染")])], 1)])]), _vm._v(" "), _c('router-view')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -9055,7 +9115,42 @@ if (false) {
 }
 
 /***/ }),
-/* 17 */
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "vFor"
+  }, [_c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("用 v-for 把一个数组对应为一组元素")]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata), function(row) {
+    return _c('li', [_vm._v("\n          " + _vm._s(row.key) + ":" + _vm._s(row.value) + "\n        ")])
+  }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata), function(row, key) {
+    return _c('li', [_vm._v("\n          " + _vm._s(row.key) + ":" + _vm._s(row.value) + " => " + _vm._s(key) + "\n        ")])
+  }))])]), _vm._v(" "), _c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("用 v-for 把一个对象对应为一组元素")]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(row) {
+    return _c('li', [_vm._v("\n          " + _vm._s(row) + "\n        ")])
+  }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(value, key) {
+    return _c('li', [_vm._v("\n          " + _vm._s(key) + ":" + _vm._s(value) + "\n        ")])
+  }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(value, key, index) {
+    return _c('li', [_vm._v("\n          " + _vm._s(key) + ":" + _vm._s(value) + " => " + _vm._s(index) + "\n        ")])
+  }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(value, key, index) {
+    return _c('li', {
+      key: index
+    }, [_vm._v("\n          " + _vm._s(key) + ":" + _vm._s(value) + " => " + _vm._s(index) + "\n        ")])
+  }))])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-41522412", module.exports)
+  }
+}
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9136,7 +9231,7 @@ if (false) {
 }
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9220,7 +9315,7 @@ if (false) {
 }
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9285,7 +9380,7 @@ if (false) {
 }
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9311,13 +9406,39 @@ if(false) {
 }
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
 var content = __webpack_require__(9);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("37381d30", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/.0.28.10@css-loader/index.js!../../node_modules/.11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-41522412\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/.11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./VFor.vue", function() {
+     var newContent = require("!!../../node_modules/.0.28.10@css-loader/index.js!../../node_modules/.11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-41522412\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/.11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./VFor.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9337,13 +9458,13 @@ if(false) {
 }
 
 /***/ }),
-/* 22 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(10);
+var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9363,13 +9484,13 @@ if(false) {
 }
 
 /***/ }),
-/* 23 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
+var content = __webpack_require__(12);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9389,7 +9510,7 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 28 */
 /***/ (function(module, exports) {
 
 /**
@@ -9422,7 +9543,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 25 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
@@ -9475,7 +9596,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(12);
+__webpack_require__(13);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -9489,7 +9610,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 26 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12121,7 +12242,7 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
-/* 27 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12130,6 +12251,9 @@ if (inBrowser && window.Vue) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
 //
 //
 //
@@ -12164,7 +12288,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 28 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12257,7 +12381,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 29 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12335,7 +12459,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 30 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12387,7 +12511,97 @@ exports.default = {
 };
 
 /***/ }),
-/* 31 */
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  data: function data() {
+    return {
+      listdata: [{
+        'key': '名称',
+        'value': '《宛若晴空》'
+      }, {
+        'key': '作者',
+        'value': '心叶'
+      }, {
+        'key': '出自',
+        'value': '轻小说《文学少女》'
+      }, {
+        'key': '时间',
+        'value': '2014-04-01'
+      }],
+      listdata2: {
+        '名称': '《宛若晴空》',
+        '作者': '心叶',
+        '出自': '轻小说《文学少女》',
+        '时间': '2014-04-01'
+      }
+    };
+  }
+};
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
