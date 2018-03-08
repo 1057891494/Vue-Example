@@ -21,6 +21,12 @@
         <li>
           <router-link to="/event">事件处理</router-link>
         </li>
+        <li>
+          <router-link to="/formInput">表单输入绑定</router-link>
+        </li>
+        <li>
+          <router-link to="/component">组件</router-link>
+        </li>
       </ul>
     </nav>
     <!--路由跳转视图-->

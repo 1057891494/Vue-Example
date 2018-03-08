@@ -7,17 +7,44 @@ import CalcWatch from '../components/CalcWatch.vue';
 import ClassStyle from '../components/ClassStyle.vue';
 import IfShow from '../components/IfShow.vue';
 import VFor from '../components/VFor.vue';
-import Event from '../components/Event.vue';
+import Events from '../components/Event.vue';
+import FormInput from '../components/FormInput.vue';
+import Component from '../components/Component.vue';
 
 //路由配置
 const router = new VueRouter({
-    routes: [
-        { path: '/', redirect: 'calcWatch' },
-        { path: '/calcWatch', component: CalcWatch },
-        { path: '/classStyle', component: ClassStyle },
-        { path: '/ifShow', component: IfShow },
-        { path: '/vFor', component: VFor },
-        { path: '/event', component: Event }
+    routes: [{
+            path: '/',
+            redirect: 'calcWatch'
+        },
+        {
+            path: '/calcWatch',
+            component: CalcWatch
+        },
+        {
+            path: '/classStyle',
+            component: ClassStyle
+        },
+        {
+            path: '/ifShow',
+            component: IfShow
+        },
+        {
+            path: '/vFor',
+            component: VFor
+        },
+        {
+            path: '/event',
+            component: Events
+        },
+        {
+            path: '/formInput',
+            component: FormInput
+        },
+        {
+            path: '/component',
+            component: Component
+        }
     ]
 });
 
