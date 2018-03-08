@@ -8667,7 +8667,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.begin ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.begin .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.CalcWatch ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.CalcWatch .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8681,7 +8681,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.root-view > header {\n  font-size: 0;\n}\n.root-view > nav > ul {\n  background-color: black;\n  font-size: 0;\n  line-height: 0.4rem;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.root-view > nav > ul > li:not(:last-child) {\n  margin-right: 0.1rem;\n}\n.root-view > nav > ul > li {\n  font-size: 0.16rem;\n  display: inline-block;\n}\n.root-view > nav > ul > li > a:hover {\n  color: rgb(240, 227, 227);\n}\n.root-view > nav > ul > li > a.router-link-active {\n  color: #fff;\n  outline: none;\n}\n.root-view > nav > ul > li > a {\n  color: #60818e;\n}\n", ""]);
+exports.push([module.i, "\n.root-view>header {\n  font-size: 0;\n}\n.root-view>nav>ul {\n  background-color: black;\n  font-size: 0;\n  line-height: 0.4rem;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.root-view>nav>ul>li:not(:last-child) {\n  margin-right: 0.1rem;\n}\n.root-view>nav>ul>li {\n  font-size: 0.16rem;\n  display: inline-block;\n}\n.root-view>nav>ul>li>a:hover {\n  color: rgb(240, 227, 227);\n}\n.root-view>nav>ul>li>a.router-link-active {\n  color: #fff;\n  outline: none;\n}\n.root-view>nav>ul>li>a {\n  color: #60818e;\n}\n", ""]);
 
 // exports
 
@@ -8695,7 +8695,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.ClassStyle .blueclass {\n  color: blue;\n}\n.ClassStyle .little-title {\n  color: brown;\n  line-height: 2em;\n}\n.ClassStyle ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.ClassStyle .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8975,7 +8975,7 @@ module.exports = Component.exports
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('section', {
-    staticClass: "begin"
+    staticClass: "CalcWatch"
   }, [_c('ul', [_c('li', {
     staticClass: "title"
   }, [_vm._v("--1.数据绑定--")]), _vm._v(" "), _c('li', [_c('input', {
@@ -9080,7 +9080,76 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('section')
+  return _c('section', {
+    staticClass: "ClassStyle"
+  }, [_c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("--1.绑定 HTML Class--")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#对象语法")]), _vm._v(" "), _c('li', [_c('input', {
+    attrs: {
+      "type": "button",
+      "value": "切换flag的真假按钮"
+    },
+    on: {
+      "click": _vm.toggleFlag
+    }
+  })]), _vm._v(" "), _c('li', [_c('div', {
+    class: {
+      blueclass: _vm.flag
+    }
+  }, [_vm._v("flag为真的时候，字是蓝色")])]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#数组对象")]), _vm._v(" "), _c('li', [_c('div', {
+    class: [_vm.class1, _vm.class2],
+    attrs: {
+      "onclick": "alert($$(this).class())"
+    }
+  }, [_vm._v("点击我查看class")])]), _vm._v(" "), _c('li', [_c('input', {
+    attrs: {
+      "type": "button",
+      "value": "切换isDoIt的真假按钮"
+    },
+    on: {
+      "click": function($event) {
+        _vm.isDoIt = !_vm.isDoIt
+      }
+    }
+  })]), _vm._v(" "), _c('li', [_c('div', {
+    class: [_vm.isDoIt ? "isDoItTrue" : "isDoItFalse"],
+    attrs: {
+      "onclick": "alert($$(this).class())"
+    }
+  }, [_vm._v("点击我查看class")])]), _vm._v(" "), _c('li', [_c('div', {
+    class: [_vm.isDoIt ? _vm.class1 : _vm.class2],
+    attrs: {
+      "onclick": "alert($$(this).class())"
+    }
+  }, [_vm._v("点击我查看class")])])]), _vm._v(" "), _c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("--2.绑定内联样式--")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#对象语法")]), _vm._v(" "), _c('li', [_c('div', {
+    style: ({
+      color: _vm.activeColor,
+      fontSize: _vm.fontSize + 'px'
+    }),
+    attrs: {
+      "onclick": "alert($$(this).attr(\"style\"))"
+    }
+  }, [_vm._v("点击我查看sytle")])]), _vm._v(" "), _c('li', [_c('div', {
+    style: (_vm.styleObject),
+    attrs: {
+      "onclick": "alert($$(this).attr(\"style\"))"
+    }
+  }, [_vm._v("点击我查看sytle")])]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#数组语法")]), _vm._v(" "), _c('li', [_c('div', {
+    style: ([_vm.styleObject, _vm.styleObject2]),
+    attrs: {
+      "onclick": "alert($$(this).attr(\"style\"))"
+    }
+  }, [_vm._v("点击我查看sytle")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -11925,6 +11994,12 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 exports.default = {
   data: function data() {
@@ -12043,10 +12118,65 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
   data: function data() {
-    return {};
+    return {
+      flag: false,
+      class1: "classname1",
+      class2: "classname2",
+      isDoIt: false,
+      activeColor: 'red',
+      fontSize: 30,
+      styleObject: {
+        color: 'red',
+        fontSize: '13px'
+      },
+      styleObject2: {
+        backgroundColor: 'gray'
+      }
+    };
+  },
+
+  methods: {
+    toggleFlag: function toggleFlag() {
+      this.flag = !this.flag;
+    }
   }
 };
 
