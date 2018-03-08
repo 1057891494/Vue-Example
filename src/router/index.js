@@ -21,7 +21,7 @@ const router = new VueRouter({
     ]
 });
 
-//有点类似管道函数，每次跳转前会先调用这个方法，如果注册了新方法，一定要调用next()
+//有点类似管道函数，每次跳转前会先调用这个方法，如果注册了该方法，一定要调用next()
 router.beforeEach(function(to, from, next) {
     console.debug("跳转路由：" + to.path);
     next();
