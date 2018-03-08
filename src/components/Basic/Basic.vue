@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      msg: "开始学习 Vue2 basic"
+      msg: "基础学习"
     };
   }
 };

@@ -24,5 +24,30 @@ export default {
 </script>
 
 <style>
-
+.root-view > header {
+  font-size: 0;
+}
+.root-view > nav > ul {
+  background-color: black;
+  font-size: 0;
+  line-height: 0.4rem;
+  padding: 0 0.3rem 0 0.3rem;
+}
+.root-view > nav > ul > li:not(:last-child) {
+  margin-right: 0.1rem;
+}
+.root-view > nav > ul > li {
+  font-size: 0.16rem;
+  display: inline-block;
+}
+.root-view > nav > ul > li > a:hover {
+  color: rgb(240, 227, 227);
+}
+.root-view > nav > ul > li > a.router-link-active {
+  color: #fff;
+  outline: none;
+}
+.root-view > nav > ul > li > a {
+  color: #60818e;
+}
 </style>

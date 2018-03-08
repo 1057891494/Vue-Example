@@ -18,11 +18,54 @@
     <link rel="apple-touch-icon" sizes="144x144" href="144icon.png" />
     <link rel="stylesheet" href="butterfly.min.css">
     <script src="luna.min.js"></script>
+    <style>
+        /* 页脚样式 */
+
+        footer {
+            font-size: .16rem;
+            background-color: #000000;
+            width: 100vw;
+            margin: auto;
+            color: rgb(242, 242, 248);
+            line-height: .5rem;
+            position: fixed;
+            bottom: 0;
+            padding: 0 .3rem 0 .3rem;
+        }
+
+        footer>.info {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: inline-block;
+        }
+
+        footer>.nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            padding-right: .5rem;
+            background-image: url('github.png');
+            background-repeat: no-repeat;
+            background-size: 0.4rem auto;
+            background-position: right center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <div id="root"></div>
     <script src="./build/main.js"></script>
+    <footer>
+        <div class='info'>
+            Vue-Example is sponsored by StepByStep | 本网站由【走一步 再走一步】支持
+        </div>
+        <div class='nav' onclick='window.location.href="https://github.com/yelloxing/Vue-Example"'>
+            Fork me on Github
+        </div>
+    </footer>
 </body>
 
 </html>

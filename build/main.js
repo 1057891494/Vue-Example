@@ -11542,7 +11542,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.root-view > header {\n  font-size: 0;\n}\n.root-view > nav > ul {\n  background-color: black;\n  font-size: 0;\n  line-height: 0.4rem;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.root-view > nav > ul > li:not(:last-child) {\n  margin-right: 0.1rem;\n}\n.root-view > nav > ul > li {\n  font-size: 0.16rem;\n  display: inline-block;\n}\n.root-view > nav > ul > li > a:hover {\n  color: rgb(240, 227, 227);\n}\n.root-view > nav > ul > li > a.router-link-active {\n  color: #fff;\n  outline: none;\n}\n.root-view > nav > ul > li > a {\n  color: #60818e;\n}\n", ""]);
 
 // exports
 
@@ -14763,7 +14763,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   data: function data() {
     return {
-      msg: "开始学习 Vue2 basic"
+      msg: "基础学习"
     };
   }
 };
@@ -14788,7 +14788,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   data: function data() {
     return {
-      msg: "开始学习 Vue2 begin"
+      msg: "入门了解"
     };
   }
 };
