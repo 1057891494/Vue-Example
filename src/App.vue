@@ -18,6 +18,9 @@
         <li>
           <router-link to="/vFor">列表渲染</router-link>
         </li>
+        <li>
+          <router-link to="/event">事件处理</router-link>
+        </li>
       </ul>
     </nav>
     <!--路由跳转视图-->
