@@ -1,6 +1,6 @@
 <template>
   <section>
-        <header><h1>{{ msg }}</h1></header>
+
   </section>
 </template>
 
@@ -8,14 +8,12 @@
 export default {
   data() {
     return {
-      msg: "入门了解"
+
     };
   }
 };
 </script>
 
 <style>
-h1 {
-  color: red;
-}
+
 </style>

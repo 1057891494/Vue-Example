@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router'
 
 //根对象
-new Vue({
+var vm=new Vue({
     //挂载点
     el: '#root',
     //路由配置

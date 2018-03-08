@@ -5,11 +5,6 @@ module.exports = {
         path: __dirname,
         filename: 'build/main.js'
     },
-    resolve: {
-        alias: {
-            'vue': 'vue/dist/vue.js'
-        }
-    },
     module: {
         loaders: [{
                 test: /\.vue$/,

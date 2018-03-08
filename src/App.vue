@@ -4,8 +4,8 @@
         <nav>
             <ul>
                 <!--路由导航-->
-                <li><router-link to="/begin">入门了解</router-link></li>
-                <li><router-link to="/basic">基础练习</router-link></li>
+                <li><router-link to="/calcWatch">计算属性和侦听器</router-link></li>
+                <li><router-link to="/classStyle">Class与Style绑定</router-link></li>
             </ul>
         </nav>
         <!--路由跳转视图-->
