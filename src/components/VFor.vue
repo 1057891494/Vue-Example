@@ -4,14 +4,14 @@
       <li class="title">用 v-for 把一个数组对应为一组元素</li>
       <li>
         <ul>
-          <li v-for='row in listdata'>
+          <li v-for='row in listdata' v-bind:key="row.key">
             {{row.key}}:{{row.value}}
           </li>
         </ul>
       </li>
       <li>
         <ul>
-          <li v-for='(row,key) in listdata'>
+          <li v-for='(row,key) in listdata' v-bind:key="key">
             {{row.key}}:{{row.value}} => {{key}}
           </li>
         </ul>
@@ -21,22 +21,15 @@
       <li class="title">用 v-for 把一个对象对应为一组元素</li>
       <li>
         <ul>
-          <li v-for='row in listdata2'>
+          <li v-for='row in listdata2' v-bind:key="row">
             {{row}}
           </li>
         </ul>
       </li>
       <li>
         <ul>
-          <li v-for='(value,key) in listdata2'>
+          <li v-for='(value,key) in listdata2' v-bind:key='key'>
             {{key}}:{{value}}
-          </li>
-        </ul>
-      </li>
-      <li>
-        <ul>
-          <li v-for='(value,key,index) in listdata2'>
-            {{key}}:{{value}} => {{index}}
           </li>
         </ul>
       </li>
