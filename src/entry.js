@@ -2,9 +2,49 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
-//注册
+//注册组件【在./components/Component.vue中调用了】
 Vue.component('begin-comp', {
-    template: '<div>注册在entry.js的组件[全局注册]</div>'
+    template: '<div>注册在entry.js的组件[全局注册]' +
+        '<input type="button" value="点击的按钮" @click="showinfo">' +
+        '<input type="button" value="点击改变数据" @click="changeData(01)">' +
+        '</div>',
+    data() {
+        return {
+            message: '这是默认的数据'
+        };
+    },
+    methods: {
+        showinfo() {
+            alert(this.message);
+        },
+        changeData(flag) {
+            this.message = flag + ":" + new Date().valueOf();
+        }
+    },
+    beforeCreate: function() {
+        console.debug('自定义组件目前状态：beforeCreate');
+    },
+    created: function() {
+        console.debug('自定义组件目前状态：created');
+    },
+    beforeMount: function() {
+        console.debug('自定义组件目前状态：beforeMount');
+    },
+    mounted: function() {
+        console.debug('自定义组件目前状态：mounted');
+    },
+    beforeUpdate: function() {
+        console.debug('自定义组件目前状态：beforeUpdate');
+    },
+    updated: function() {
+        console.debug('自定义组件目前状态：updated');
+    },
+    beforeDestroy: function() {
+        console.debug('自定义组件目前状态：beforeDestroy');
+    },
+    destroyed: function() {
+        console.debug('自定义组件目前状态：destroyed');
+    }
 });
 
 //根对象
@@ -17,27 +57,27 @@ var vm = new Vue({
     render: function(callback) { return callback(App); },
     //下面是Vue对象的几种状态
     beforeCreate: function() {
-        console.debug('目前状态：beforeCreate');
+        console.debug('Vue对象目前状态：beforeCreate');
     },
     created: function() {
-        console.debug('目前状态：created');
+        console.debug('Vue对象目前状态：created');
     },
     beforeMount: function() {
-        console.debug('目前状态：beforeMount');
+        console.debug('Vue对象目前状态：beforeMount');
     },
     mounted: function() {
-        console.debug('目前状态：mounted');
+        console.debug('Vue对象目前状态：mounted');
     },
     beforeUpdate: function() {
-        console.debug('目前状态：beforeUpdate');
+        console.debug('Vue对象目前状态：beforeUpdate');
     },
     updated: function() {
-        console.debug('目前状态：updated');
+        console.debug('Vue对象目前状态：updated');
     },
     beforeDestroy: function() {
-        console.debug('目前状态：beforeDestroy');
+        console.debug('Vue对象目前状态：beforeDestroy');
     },
     destroyed: function() {
-        console.debug('目前状态：destroyed');
+        console.debug('Vue对象目前状态：destroyed');
     }
 });
