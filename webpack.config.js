@@ -5,6 +5,12 @@ module.exports = {
         path: __dirname,
         filename: 'build/main.js'
     },
+    resolve: {
+        alias: {
+            // vue.js = vue.common.js + compiler.js，而如果要使用 template 这个属性的话就一定要用 compiler.js
+            'vue': 'vue/dist/vue.js'
+        }
+    },
     module: {
         loaders: [{
                 test: /\.vue$/,

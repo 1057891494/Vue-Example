@@ -1,9 +1,14 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router'
+import router from './router';
+
+//注册
+Vue.component('begin-comp', {
+    template: '<div>注册在entry.js的组件[全局注册]</div>'
+});
 
 //根对象
-var vm=new Vue({
+var vm = new Vue({
     //挂载点
     el: '#root',
     //路由配置
