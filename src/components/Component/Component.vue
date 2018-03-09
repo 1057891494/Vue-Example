@@ -1,11 +1,22 @@
 <template>
-  <section>
-    <begin-comp></begin-comp>
+  <section class='ct'>
+    <begin-comp toChildData='这是父组件的数据' v-bind:dynamitData='pData'></begin-comp>
+    <input type="button" value="修改【默认的来自父组件的值】" @click='doChg'>
   </section>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      pData: "默认的来自父组件的值"
+    };
+  },
+  methods: {
+    doChg() {
+      this.pData = "[默认的来自父组件的值]" + new Date().valueOf();
+    }
+  },
   beforeCreate: function() {
     console.debug("Componet.vue目前状态：beforeCreate");
   },
@@ -34,5 +45,9 @@ export default {
 </script>
 
 <style>
-
+.ct .title {
+  color: red;
+    margin: 0.3rem;
+  margin-bottom: 0;
+}
 </style>

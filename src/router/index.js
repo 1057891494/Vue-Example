@@ -9,7 +9,7 @@ import IfShow from '../components/IfShow.vue';
 import VFor from '../components/VFor.vue';
 import Events from '../components/Event.vue';
 import FormInput from '../components/FormInput.vue';
-import Component from '../components/Component.vue';
+import Component from '../components/Component/Component.vue';
 
 //路由配置
 const router = new VueRouter({
