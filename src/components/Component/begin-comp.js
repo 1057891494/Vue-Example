@@ -16,7 +16,8 @@ const beginComp = Vue.component('begin-comp', {
         '</div>',
     data() {
         return {
-            message: '这是默认的数据'
+            message: '这是默认的数据',
+            count:1
         };
     },
     methods: {
@@ -25,6 +26,10 @@ const beginComp = Vue.component('begin-comp', {
         },
         changeData(flag) {
             this.message = flag + ":" + new Date().valueOf();
+        },
+        addConut(){
+          this.count++;
+          this.$emit('fromChild');
         }
     },
     beforeCreate: function() {

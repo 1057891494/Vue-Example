@@ -4,6 +4,7 @@ import router from './router';
 
 //自定义的组件必须在new Vue之前导入
 import beginComp from './components/Component/begin-comp.js';
+import emitComp from './components/Component/emit-comp.js';
 
 //根对象
 var vm = new Vue({
