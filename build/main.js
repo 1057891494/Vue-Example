@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 41);
+/******/ 	return __webpack_require__(__webpack_require__.s = 51);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -225,7 +225,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(32)
+var listToStyles = __webpack_require__(40)
 
 /*
 type StyleObject = {
@@ -8571,7 +8571,7 @@ Vue$3.nextTick(function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(4), __webpack_require__(33).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(4), __webpack_require__(41).setImmediate))
 
 /***/ }),
 /* 6 */
@@ -8579,13 +8579,13 @@ Vue$3.nextTick(function () {
 
 
 /* styles */
-__webpack_require__(26)
+__webpack_require__(34)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(35),
+  __webpack_require__(43),
   /* template */
-  __webpack_require__(20),
+  __webpack_require__(26),
   /* scopeId */
   null,
   /* cssModules */
@@ -8626,29 +8626,37 @@ var _vue = __webpack_require__(5);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = __webpack_require__(34);
+var _vueRouter = __webpack_require__(42);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _CalcWatch = __webpack_require__(15);
+var _CalcWatch = __webpack_require__(17);
 
 var _CalcWatch2 = _interopRequireDefault(_CalcWatch);
 
-var _ClassStyle = __webpack_require__(16);
+var _ClassStyle = __webpack_require__(18);
 
 var _ClassStyle2 = _interopRequireDefault(_ClassStyle);
 
-var _IfShow = __webpack_require__(18);
+var _IfShow = __webpack_require__(22);
 
 var _IfShow2 = _interopRequireDefault(_IfShow);
 
-var _VFor = __webpack_require__(19);
+var _VFor = __webpack_require__(23);
 
 var _VFor2 = _interopRequireDefault(_VFor);
 
-var _Event = __webpack_require__(17);
+var _Event = __webpack_require__(20);
 
 var _Event2 = _interopRequireDefault(_Event);
+
+var _FormInput = __webpack_require__(21);
+
+var _FormInput2 = _interopRequireDefault(_FormInput);
+
+var _Component = __webpack_require__(19);
+
+var _Component2 = _interopRequireDefault(_Component);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8659,10 +8667,34 @@ _vue2.default.use(_vueRouter2.default);
 
 //路由配置
 var router = new _vueRouter2.default({
-    routes: [{ path: '/', redirect: 'calcWatch' }, { path: '/calcWatch', component: _CalcWatch2.default }, { path: '/classStyle', component: _ClassStyle2.default }, { path: '/ifShow', component: _IfShow2.default }, { path: '/vFor', component: _VFor2.default }, { path: '/event', component: _Event2.default }]
+    routes: [{
+        path: '/',
+        redirect: 'calcWatch'
+    }, {
+        path: '/calcWatch',
+        component: _CalcWatch2.default
+    }, {
+        path: '/classStyle',
+        component: _ClassStyle2.default
+    }, {
+        path: '/ifShow',
+        component: _IfShow2.default
+    }, {
+        path: '/vFor',
+        component: _VFor2.default
+    }, {
+        path: '/event',
+        component: _Event2.default
+    }, {
+        path: '/formInput',
+        component: _FormInput2.default
+    }, {
+        path: '/component',
+        component: _Component2.default
+    }]
 });
 
-//有点类似管道函数，每次跳转前会先调用这个方法，如果注册了新方法，一定要调用next()
+//有点类似管道函数，每次跳转前会先调用这个方法，如果注册了该方法，一定要调用next()
 router.beforeEach(function (to, from, next) {
     console.debug("跳转路由：" + to.path);
     next();
@@ -8679,7 +8711,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.root-view>header {\n  font-size: 0;\n}\n.root-view>nav>ul {\n  background-color: black;\n  font-size: 0;\n  line-height: 0.4rem;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.root-view>nav>ul>li:not(:last-child) {\n  margin-right: 0.1rem;\n}\n.root-view>nav>ul>li {\n  font-size: 0.16rem;\n  display: inline-block;\n}\n.root-view>nav>ul>li>a:hover {\n  color: rgb(240, 227, 227);\n}\n.root-view>nav>ul>li>a.router-link-active {\n  color: #fff;\n  outline: none;\n}\n.root-view>nav>ul>li>a {\n  color: #60818e;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -8693,7 +8725,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.vFor ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.vFor .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.formInput ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.formInput .little-title {\n  color: brown;\n  line-height: 2em;\n}\n.formInput .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8707,7 +8739,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.CalcWatch ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.CalcWatch .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.root-view>header {\n  font-size: 0;\n}\n.root-view>nav>ul {\n  background-color: black;\n  font-size: 0;\n  line-height: 0.4rem;\n  padding: 0 0.3rem 0 0.3rem;\n}\n.root-view>nav>ul>li:not(:last-child) {\n  margin-right: 0.1rem;\n}\n.root-view>nav>ul>li {\n  font-size: 0.16rem;\n  display: inline-block;\n}\n.root-view>nav>ul>li>a:hover {\n  color: rgb(240, 227, 227);\n}\n.root-view>nav>ul>li>a.router-link-active {\n  color: #fff;\n  outline: none;\n}\n.root-view>nav>ul>li>a {\n  color: #60818e;\n}\n", ""]);
 
 // exports
 
@@ -8721,7 +8753,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.Event ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.Event .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.vFor ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.vFor .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8735,7 +8767,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ClassStyle .blueclass {\n  color: blue;\n}\n.ClassStyle .little-title {\n  color: brown;\n  line-height: 2em;\n}\n.ClassStyle ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.ClassStyle .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.CalcWatch ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.CalcWatch .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -8749,13 +8781,41 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.IfShow ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.IfShow .title {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "\n.Event ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.Event .title {\n  color: red;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ClassStyle .blueclass {\n  color: blue;\n}\n.ClassStyle .little-title {\n  color: brown;\n  line-height: 2em;\n}\n.ClassStyle ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.ClassStyle .title {\n  color: red;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.IfShow ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\n}\n.IfShow .title {\n  color: red;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -8948,18 +9008,18 @@ exports.push([module.i, "\n.IfShow ul {\n  margin: 0.3rem;\n  margin-bottom: 0;\
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(3)))
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(28)
+__webpack_require__(36)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(36),
+  __webpack_require__(44),
   /* template */
-  __webpack_require__(22),
+  __webpack_require__(28),
   /* scopeId */
   null,
   /* cssModules */
@@ -8986,18 +9046,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(30)
+__webpack_require__(38)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(37),
+  __webpack_require__(45),
   /* template */
-  __webpack_require__(24),
+  __webpack_require__(30),
   /* scopeId */
   null,
   /* cssModules */
@@ -9024,18 +9084,56 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(29)
+__webpack_require__(32)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(38),
+  __webpack_require__(46),
   /* template */
-  __webpack_require__(23),
+  __webpack_require__(24),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kapok/Github/Vue-Example/src/components/Component.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Component.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-08d00fae", Component.options)
+  } else {
+    hotAPI.reload("data-v-08d00fae", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(37)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(47),
+  /* template */
+  __webpack_require__(29),
   /* scopeId */
   null,
   /* cssModules */
@@ -9062,18 +9160,56 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(31)
+__webpack_require__(33)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(39),
+  __webpack_require__(48),
   /* template */
   __webpack_require__(25),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kapok/Github/Vue-Example/src/components/FormInput.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] FormInput.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-226a3412", Component.options)
+  } else {
+    hotAPI.reload("data-v-226a3412", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(39)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(49),
+  /* template */
+  __webpack_require__(31),
   /* scopeId */
   null,
   /* cssModules */
@@ -9100,18 +9236,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 19 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(27)
+__webpack_require__(35)
 
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(40),
+  __webpack_require__(50),
   /* template */
-  __webpack_require__(21),
+  __webpack_require__(27),
   /* scopeId */
   null,
   /* cssModules */
@@ -9138,7 +9274,490 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 20 */
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c("div")
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-08d00fae", module.exports)
+  }
+}
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "formInput"
+  }, [_c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("--1.基础用法--")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#文本")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname1),
+      expression: "modelname1"
+    }],
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.modelname1)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.modelname1 = $event.target.value
+      }
+    }
+  }), _vm._v(" 文本的值为 : " + _vm._s(_vm.modelname1) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#多行文本")]), _vm._v(" "), _c('li', [_c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname2),
+      expression: "modelname2"
+    }],
+    attrs: {
+      "cols": "60",
+      "rows": "3"
+    },
+    domProps: {
+      "value": (_vm.modelname2)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.modelname2 = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('div', {
+    staticStyle: {
+      "white-space": "pre-line"
+    }
+  }, [_vm._v("\n        " + _vm._s(_vm.modelname2) + "\n      ")])]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#复选框")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname3),
+      expression: "modelname3"
+    }],
+    attrs: {
+      "type": "checkbox",
+      "id": "ck1",
+      "value": "ck1"
+    },
+    domProps: {
+      "checked": Array.isArray(_vm.modelname3) ? _vm._i(_vm.modelname3, "ck1") > -1 : (_vm.modelname3)
+    },
+    on: {
+      "change": function($event) {
+        var $$a = _vm.modelname3,
+          $$el = $event.target,
+          $$c = $$el.checked ? (true) : (false);
+        if (Array.isArray($$a)) {
+          var $$v = "ck1",
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && (_vm.modelname3 = $$a.concat([$$v]))
+          } else {
+            $$i > -1 && (_vm.modelname3 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+          }
+        } else {
+          _vm.modelname3 = $$c
+        }
+      }
+    }
+  }), _vm._v("ck1\n      "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname3),
+      expression: "modelname3"
+    }],
+    attrs: {
+      "type": "checkbox",
+      "id": "ck2",
+      "value": "ck2"
+    },
+    domProps: {
+      "checked": Array.isArray(_vm.modelname3) ? _vm._i(_vm.modelname3, "ck2") > -1 : (_vm.modelname3)
+    },
+    on: {
+      "change": function($event) {
+        var $$a = _vm.modelname3,
+          $$el = $event.target,
+          $$c = $$el.checked ? (true) : (false);
+        if (Array.isArray($$a)) {
+          var $$v = "ck2",
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && (_vm.modelname3 = $$a.concat([$$v]))
+          } else {
+            $$i > -1 && (_vm.modelname3 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+          }
+        } else {
+          _vm.modelname3 = $$c
+        }
+      }
+    }
+  }), _vm._v("ck2\n      "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname3),
+      expression: "modelname3"
+    }],
+    attrs: {
+      "type": "checkbox",
+      "id": "ck3",
+      "value": "ck3"
+    },
+    domProps: {
+      "checked": Array.isArray(_vm.modelname3) ? _vm._i(_vm.modelname3, "ck3") > -1 : (_vm.modelname3)
+    },
+    on: {
+      "change": function($event) {
+        var $$a = _vm.modelname3,
+          $$el = $event.target,
+          $$c = $$el.checked ? (true) : (false);
+        if (Array.isArray($$a)) {
+          var $$v = "ck3",
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && (_vm.modelname3 = $$a.concat([$$v]))
+          } else {
+            $$i > -1 && (_vm.modelname3 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+          }
+        } else {
+          _vm.modelname3 = $$c
+        }
+      }
+    }
+  }), _vm._v("ck3\n      "), _c('br'), _vm._v(" 你选择的有：" + _vm._s(_vm.modelname3) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#单选按钮")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname4),
+      expression: "modelname4"
+    }],
+    attrs: {
+      "type": "radio",
+      "value": "rd1"
+    },
+    domProps: {
+      "checked": _vm._q(_vm.modelname4, "rd1")
+    },
+    on: {
+      "change": function($event) {
+        _vm.modelname4 = "rd1"
+      }
+    }
+  }), _vm._v("rd1\n      "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname4),
+      expression: "modelname4"
+    }],
+    attrs: {
+      "type": "radio",
+      "value": "rd2"
+    },
+    domProps: {
+      "checked": _vm._q(_vm.modelname4, "rd2")
+    },
+    on: {
+      "change": function($event) {
+        _vm.modelname4 = "rd2"
+      }
+    }
+  }), _vm._v("rd2\n      "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname4),
+      expression: "modelname4"
+    }],
+    attrs: {
+      "type": "radio",
+      "value": "rd3"
+    },
+    domProps: {
+      "checked": _vm._q(_vm.modelname4, "rd3")
+    },
+    on: {
+      "change": function($event) {
+        _vm.modelname4 = "rd3"
+      }
+    }
+  }), _vm._v("rd3\n      "), _c('br'), _vm._v("你选择的是：" + _vm._s(_vm.modelname4) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#选择框")]), _vm._v(" "), _c('li', [_c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname5),
+      expression: "modelname5"
+    }],
+    on: {
+      "change": function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.modelname5 = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+      }
+    }
+  }, [_c('option', {
+    attrs: {
+      "disabled": "",
+      "value": ""
+    }
+  }, [_vm._v("请选择")]), _vm._v(" "), _c('option', [_vm._v("选项一")]), _vm._v(" "), _c('option', [_vm._v("选项二")]), _vm._v(" "), _c('option', [_vm._v("选项三")])]), _vm._v(" 你选择的是：" + _vm._s(_vm.modelname5) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#多选框")]), _vm._v(" "), _c('li', [_c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname6),
+      expression: "modelname6"
+    }],
+    attrs: {
+      "multiple": ""
+    },
+    on: {
+      "change": function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.modelname6 = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+      }
+    }
+  }, [_c('option', [_vm._v("选项一")]), _vm._v(" "), _c('option', {
+    attrs: {
+      "value": "key-二"
+    }
+  }, [_vm._v("选项二")]), _vm._v(" "), _c('option', [_vm._v("选项三")])]), _vm._v(" 你选择的有：" + _vm._s(_vm.modelname6) + "\n    ")])]), _vm._v(" "), _c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("--2.值绑定--")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#复选框")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname7),
+      expression: "modelname7"
+    }],
+    attrs: {
+      "type": "checkbox",
+      "true-value": "yes1",
+      "false-value": "no1"
+    },
+    domProps: {
+      "checked": Array.isArray(_vm.modelname7) ? _vm._i(_vm.modelname7, null) > -1 : _vm._q(_vm.modelname7, "yes1")
+    },
+    on: {
+      "change": function($event) {
+        var $$a = _vm.modelname7,
+          $$el = $event.target,
+          $$c = $$el.checked ? ("yes1") : ("no1");
+        if (Array.isArray($$a)) {
+          var $$v = null,
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && (_vm.modelname7 = $$a.concat([$$v]))
+          } else {
+            $$i > -1 && (_vm.modelname7 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+          }
+        } else {
+          _vm.modelname7 = $$c
+        }
+      }
+    }
+  }), _vm._v("modelname7=" + _vm._s(_vm.modelname7) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#单选按钮")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname8),
+      expression: "modelname8"
+    }],
+    attrs: {
+      "type": "radio"
+    },
+    domProps: {
+      "value": _vm.tempvalue1,
+      "checked": _vm._q(_vm.modelname8, _vm.tempvalue1)
+    },
+    on: {
+      "change": function($event) {
+        _vm.modelname8 = _vm.tempvalue1
+      }
+    }
+  }), _vm._v("值哦-1\n      "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname8),
+      expression: "modelname8"
+    }],
+    attrs: {
+      "type": "radio"
+    },
+    domProps: {
+      "value": _vm.tempvalue2,
+      "checked": _vm._q(_vm.modelname8, _vm.tempvalue2)
+    },
+    on: {
+      "change": function($event) {
+        _vm.modelname8 = _vm.tempvalue2
+      }
+    }
+  }), _vm._v("值哦-2\n      "), _c('br'), _vm._v("modelname8=" + _vm._s(_vm.modelname8) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#选择框")]), _vm._v(" "), _c('li', [_c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname9),
+      expression: "modelname9"
+    }],
+    on: {
+      "change": function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.modelname9 = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+      }
+    }
+  }, [_c('option', {
+    domProps: {
+      "value": {
+        val: 1
+      }
+    }
+  }, [_vm._v("temp9-1")]), _vm._v(" "), _c('option', {
+    domProps: {
+      "value": {
+        val: 2
+      }
+    }
+  }, [_vm._v("temp9-2")]), _vm._v(" "), _c('option', {
+    domProps: {
+      "value": {
+        val: 3
+      }
+    }
+  }, [_vm._v("temp9-3")])]), _vm._v("\n      modelname9=" + _vm._s(_vm.modelname9) + "\n    ")])]), _vm._v(" "), _c('ul', [_c('li', {
+    staticClass: "title"
+  }, [_vm._v("--3.修饰符--")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#.number")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model.number",
+      value: (_vm.modelname10),
+      expression: "modelname10",
+      modifiers: {
+        "number": true
+      }
+    }],
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.modelname10)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.modelname10 = _vm._n($event.target.value)
+      },
+      "blur": function($event) {
+        _vm.$forceUpdate()
+      }
+    }
+  }), _vm._v("\n      " + _vm._s(typeof _vm.modelname10) + "\n    ")]), _vm._v(" "), _c('li', {
+    staticClass: "little-title"
+  }, [_vm._v("#.trim")]), _vm._v(" "), _c('li', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model.trim",
+      value: (_vm.modelname11),
+      expression: "modelname11",
+      modifiers: {
+        "trim": true
+      }
+    }],
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.modelname11)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.modelname11 = $event.target.value.trim()
+      },
+      "blur": function($event) {
+        _vm.$forceUpdate()
+      }
+    }
+  }), _vm._v("\n      -" + _vm._s(_vm.modelname11) + "-\n      "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.modelname12),
+      expression: "modelname12"
+    }],
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.modelname12)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.modelname12 = $event.target.value
+      }
+    }
+  }), _vm._v("\n      -" + _vm._s(_vm.modelname12) + "-\n      ")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-226a3412", module.exports)
+  }
+}
+
+/***/ }),
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9164,7 +9783,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": "/event"
     }
-  }, [_vm._v("事件处理")])], 1)])]), _vm._v(" "), _c('router-view')], 1)
+  }, [_vm._v("事件处理")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": "/formInput"
+    }
+  }, [_vm._v("表单输入绑定")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": "/component"
+    }
+  }, [_vm._v("组件")])], 1)])]), _vm._v(" "), _c('router-view')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -9175,7 +9802,7 @@ if (false) {
 }
 
 /***/ }),
-/* 21 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9184,17 +9811,23 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('ul', [_c('li', {
     staticClass: "title"
   }, [_vm._v("用 v-for 把一个数组对应为一组元素")]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata), function(row) {
-    return _c('li', [_vm._v("\n          " + _vm._s(row.key) + ":" + _vm._s(row.value) + "\n        ")])
+    return _c('li', {
+      key: row.key
+    }, [_vm._v("\n          " + _vm._s(row.key) + ":" + _vm._s(row.value) + "\n        ")])
   }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata), function(row, key) {
-    return _c('li', [_vm._v("\n          " + _vm._s(row.key) + ":" + _vm._s(row.value) + " => " + _vm._s(key) + "\n        ")])
+    return _c('li', {
+      key: key
+    }, [_vm._v("\n          " + _vm._s(row.key) + ":" + _vm._s(row.value) + " => " + _vm._s(key) + "\n        ")])
   }))])]), _vm._v(" "), _c('ul', [_c('li', {
     staticClass: "title"
   }, [_vm._v("用 v-for 把一个对象对应为一组元素")]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(row) {
-    return _c('li', [_vm._v("\n          " + _vm._s(row) + "\n        ")])
+    return _c('li', {
+      key: row
+    }, [_vm._v("\n          " + _vm._s(row) + "\n        ")])
   }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(value, key) {
-    return _c('li', [_vm._v("\n          " + _vm._s(key) + ":" + _vm._s(value) + "\n        ")])
-  }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(value, key, index) {
-    return _c('li', [_vm._v("\n          " + _vm._s(key) + ":" + _vm._s(value) + " => " + _vm._s(index) + "\n        ")])
+    return _c('li', {
+      key: key
+    }, [_vm._v("\n          " + _vm._s(key) + ":" + _vm._s(value) + "\n        ")])
   }))]), _vm._v(" "), _c('li', [_c('ul', _vm._l((_vm.listdata2), function(value, key, index) {
     return _c('li', {
       key: index
@@ -9210,7 +9843,7 @@ if (false) {
 }
 
 /***/ }),
-/* 22 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9291,7 +9924,7 @@ if (false) {
 }
 
 /***/ }),
-/* 23 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9392,7 +10025,7 @@ if (false) {
 }
 
 /***/ }),
-/* 24 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9476,7 +10109,7 @@ if (false) {
 }
 
 /***/ }),
-/* 25 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -9541,13 +10174,65 @@ if (false) {
 }
 
 /***/ }),
-/* 26 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
 var content = __webpack_require__(8);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("75c8838b", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/.0.28.10@css-loader/index.js!../../node_modules/.11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-08d00fae\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/.11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Component.vue", function() {
+     var newContent = require("!!../../node_modules/.0.28.10@css-loader/index.js!../../node_modules/.11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-08d00fae\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/.11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Component.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(9);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("39fd76e3", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/.0.28.10@css-loader/index.js!../../node_modules/.11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-226a3412\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/.11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./FormInput.vue", function() {
+     var newContent = require("!!../../node_modules/.0.28.10@css-loader/index.js!../../node_modules/.11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-226a3412\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/.11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./FormInput.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9567,13 +10252,13 @@ if(false) {
 }
 
 /***/ }),
-/* 27 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(9);
+var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9593,13 +10278,13 @@ if(false) {
 }
 
 /***/ }),
-/* 28 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(10);
+var content = __webpack_require__(12);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9619,13 +10304,13 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
+var content = __webpack_require__(13);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9645,13 +10330,13 @@ if(false) {
 }
 
 /***/ }),
-/* 30 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9671,13 +10356,13 @@ if(false) {
 }
 
 /***/ }),
-/* 31 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(13);
+var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9697,7 +10382,7 @@ if(false) {
 }
 
 /***/ }),
-/* 32 */
+/* 40 */
 /***/ (function(module, exports) {
 
 /**
@@ -9730,7 +10415,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 33 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
@@ -9783,7 +10468,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(14);
+__webpack_require__(16);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -9797,7 +10482,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 34 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12429,7 +13114,7 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
-/* 35 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12438,6 +13123,12 @@ if (inBrowser && window.Vue) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -12478,7 +13169,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 36 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12571,7 +13262,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 37 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12649,7 +13340,24 @@ exports.default = {
 };
 
 /***/ }),
-/* 38 */
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+
+exports.default = {};
+
+/***/ }),
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12724,7 +13432,130 @@ exports.default = {
 };
 
 /***/ }),
-/* 39 */
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  data: function data() {
+    return {
+      tempvalue1: "值哦-1",
+      tempvalue2: "值哦-2",
+      modelname1: "初始化1",
+      modelname2: "初始化2",
+      modelname3: [],
+      modelname4: "",
+      modelname5: "",
+      modelname6: [],
+      modelname7: "",
+      modelname8: "",
+      modelname9: {},
+      modelname10: "",
+      modelname11: "",
+      modelname12: ""
+    };
+  }
+};
+
+/***/ }),
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12776,7 +13607,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 40 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12785,13 +13616,6 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -12866,7 +13690,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 41 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
