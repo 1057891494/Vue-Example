@@ -9,6 +9,9 @@ import emitComp from './components/Component/emit-comp.js';
 // 自定义指令（全局的）
 import './components/directive/begin-dir';
 
+//过滤器{全部}
+import './components/filter/begin-filter';
+
 //根对象
 var vm = new Vue({
     //挂载点

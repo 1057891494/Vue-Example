@@ -11,6 +11,7 @@ import Events from '../components/Event.vue';
 import FormInput from '../components/FormInput.vue';
 import Component from '../components/Component/Component.vue';
 import Directive from '../components/directive/directive.vue';
+import Filter from '../components/filter/filter.vue';
 
 //路由配置
 const router = new VueRouter({
@@ -49,6 +50,10 @@ const router = new VueRouter({
         {
             path: '/directive',
             component: Directive
+        },
+        {
+            path: '/filter',
+            component: Filter
         }
     ]
 });
