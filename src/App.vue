@@ -27,6 +27,9 @@
         <li>
           <router-link to="/component">组件</router-link>
         </li>
+        <li>
+          <router-link to="/directive">指令</router-link>
+        </li>
       </ul>
     </nav>
     <!--路由跳转视图-->

@@ -10,6 +10,7 @@ import VFor from '../components/VFor.vue';
 import Events from '../components/Event.vue';
 import FormInput from '../components/FormInput.vue';
 import Component from '../components/Component/Component.vue';
+import Directive from '../components/directive/directive.vue';
 
 //路由配置
 const router = new VueRouter({
@@ -44,6 +45,10 @@ const router = new VueRouter({
         {
             path: '/component',
             component: Component
+        },
+        {
+            path: '/directive',
+            component: Directive
         }
     ]
 });

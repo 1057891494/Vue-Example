@@ -6,6 +6,9 @@ import router from './router';
 import beginComp from './components/Component/begin-comp.js';
 import emitComp from './components/Component/emit-comp.js';
 
+// 自定义指令（全局的）
+import './components/directive/begin-dir';
+
 //根对象
 var vm = new Vue({
     //挂载点
