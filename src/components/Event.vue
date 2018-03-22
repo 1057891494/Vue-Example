@@ -11,6 +11,10 @@
       <li>
         <input type="button" value='点击我调用事件' v-on:click='doIt' />
         <input type="button" value='点击我调用事件' @click='doIt' />
+        <button @click='doIt2' id='doit2' >
+          点击我下面文字会改变
+        </button>
+        <div id='info2'>{{texthelp}}</div>
       </li>
     </ul>
     <ul>
@@ -45,12 +49,17 @@
   export default {
     data() {
       return {
-        num: 0
+        num: 0,
+        texthelp:"初始化"
       };
     },
     methods: {
       doIt() {
+
         alert("你调用了我");
+      },
+      doIt2(){
+        this.texthelp='New Info';
       },
       doMethod: function(param) {
         alert(param);
