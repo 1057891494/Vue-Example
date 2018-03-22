@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 module.exports = {
-    entry: './src/entry.js',
+    entry: ['./src/entry.js','whatwg-fetch'],
     output: {
         path: __dirname,
         filename: 'build/main.js'
