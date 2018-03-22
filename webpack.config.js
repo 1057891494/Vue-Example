@@ -7,6 +7,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            // vue.js = vue.common.js + compiler.js，而如果要使用 template 这个属性的话就一定要用 compiler.js
             'vue': 'vue/dist/vue.js'
         }
     },
@@ -23,6 +24,16 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
         new webpack.LoaderOptionsPlugin({
             options: {
                 babel: {
