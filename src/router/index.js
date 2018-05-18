@@ -12,6 +12,7 @@ import FormInput from '../components/FormInput.vue';
 import Component from '../components/Component/Component.vue';
 import Directive from '../components/directive/directive.vue';
 import Filter from '../components/filter/filter.vue';
+import XHR from '../components/xhr.vue';
 
 //路由配置
 const router = new VueRouter({
@@ -54,6 +55,10 @@ const router = new VueRouter({
         {
             path: '/filter',
             component: Filter
+        },
+        {
+            path: '/xhr',
+            component: XHR
         }
     ]
 });

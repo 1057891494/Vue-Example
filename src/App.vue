@@ -33,6 +33,9 @@
         <li>
           <router-link to="/filter">过滤器</router-link>
         </li>
+        <li>
+          <router-link to="/xhr">fetch(XHR)</router-link>
+        </li>
       </ul>
     </nav>
     <!--路由跳转视图-->
